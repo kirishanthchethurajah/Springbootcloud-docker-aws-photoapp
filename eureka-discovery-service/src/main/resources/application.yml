@@ -1,0 +1,26 @@
+#server:
+#  port: 8761
+#spring:
+#  application:
+#    name: eureka-discovery-service
+#  security:
+#
+#    user:
+#      name: krish
+#      password: krish
+#    basic:
+#      enabled: true
+#
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#
+#
+#
+#
+#
+#

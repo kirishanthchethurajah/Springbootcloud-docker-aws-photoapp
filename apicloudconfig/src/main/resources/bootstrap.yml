@@ -1,0 +1,39 @@
+spring:
+  profiles:
+    active: git #native
+  application:
+    name: apicloudconfigserver
+
+#location of where the config file exist
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/kirishanthchethurajah/apicloudconfigserver
+          username: kchethur@uni-bremen.de
+          password: 2017_August25
+          clone-on-start: true
+#        native:
+#          search-locations: file://${user.home}/ckiri/localconfig/
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 4000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+encrypt:
+  key: 12nkj40nhmn2p0mJKJNKJ83
+
+
+
+
+
+

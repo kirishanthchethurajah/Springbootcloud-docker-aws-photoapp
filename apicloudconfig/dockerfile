@@ -1,0 +1,6 @@
+FROM adoptopenjdk/openjdk11:alpine-jre
+VOLUME /tmp
+COPY apiEncryptionKey.jks apiEncryptionKey.jks
+COPY UnlimitedJCEPolicyJDK8/* /usr/lib/jdk-11.0.7/lib/security
+COPY target/apicloudconfig-0.0.1-SNAPSHOT.jar apicloudconfig.jar
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar ","apicloudconfig.jar"]

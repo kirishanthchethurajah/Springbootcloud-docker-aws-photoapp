@@ -1,0 +1,32 @@
+spring:
+  security:
+    basic:
+      enabled: false
+  cloud:
+    config:
+      uri: http://localhost:4000
+      name: zuul-api-gateway
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans, health, routes, httptrace
+api:
+  zuul:
+    actuator:
+      url:
+        path: /actuator/*
+
+  users:
+    actuator:
+      url:
+        path: /user-service/actuator/*
+
+

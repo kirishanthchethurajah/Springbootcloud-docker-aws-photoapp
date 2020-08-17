@@ -1,0 +1,15 @@
+#server:
+#  port: 3000
+#
+#spring:
+#  application:
+#    name: zuul-api-gateway
+#
+#api.h2.console.path: user-service/h2-console/**
+#api.registration.url.path: user-service/users/
+#api.login.url.path: user-service/users/login
+#
+#authorization.token.header.name: Authorization
+#authorization.token.header.prefix: Bearer
+#
+#token.secret: 27edakjfopwe491dcbsf983
